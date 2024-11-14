@@ -76,6 +76,7 @@ export const App = () => {
   const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
 
   const submit = () => {
+    window.gtag('event', '3675_main_landing_v8');
     LS.setItem(LSKeys.ShowThx, true);
     setThx(true);
   };
