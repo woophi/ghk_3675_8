@@ -1,15 +1,12 @@
 export const enum LSKeys {
-  ShowThx = "ab_show_thx_ghk_3675_8",
+  ShowThx = 'ab_show_thx_ghk_3675__8',
 }
 
 export interface LSData {
   [LSKeys.ShowThx]: boolean | null;
 }
 
-const getItem = <K extends LSKeys>(
-  key: K,
-  defaultValue: LSData[K],
-): LSData[K] => {
+const getItem = <K extends LSKeys>(key: K, defaultValue: LSData[K]): LSData[K] => {
   try {
     const v = localStorage.getItem(key);
     return v ? JSON.parse(v) : defaultValue;
